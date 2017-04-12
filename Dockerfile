@@ -16,7 +16,6 @@ RUN cd "/tmp" \
  && tar -xf $SBT_FILE \
  && mv $SBT_NAME $SBT_HOME \
  && cleanimage
-ENV sbt_home $SBT_HOME
 ENV PATH $PATH:$SBT_HOME/bin
 
 
