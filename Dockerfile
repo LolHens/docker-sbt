@@ -20,3 +20,5 @@ ENV PATH $PATH:$SBT_HOME/bin
 
 
 WORKDIR /root
+
+RUN sbt tasks
