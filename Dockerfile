@@ -2,10 +2,10 @@ FROM lolhens/baseimage-openjdk:latest
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.1.0
+ENV SBT_VERSION 1.1.5
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
-ENV SBT_URL http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/$SBT_FILE
+ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
 ENV JAVA_OPTS -Xmx2G
