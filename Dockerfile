@@ -19,10 +19,11 @@ RUN cd /tmp \
 
 ENV PATH $PATH:$SBT_HOME/bin
 
-RUN sbt 'set scalaVersion := "2.12.8"' compile \
+RUN pwd \
+ && mkdir src/main/scala \
+ && touch src/main/scala/init.scala \
+ && sbt 'set scalaVersion := "2.12.8"' compile \
  && cleanimage
 
 
 WORKDIR /root
-
-RUN sbt tasks
