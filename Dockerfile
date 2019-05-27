@@ -27,3 +27,5 @@ RUN cd /tmp \
 
 
 WORKDIR /root
+
+RUN sbt tasks
