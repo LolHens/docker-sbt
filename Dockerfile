@@ -11,12 +11,16 @@ ENV SBT_HOME /usr/local/sbt
 ENV JAVA_OPTS -Xmx2G
 
 
-RUN cd "/tmp" \
+RUN cd /tmp \
  && curl -LO $SBT_URL \
  && tar -xf $SBT_FILE \
  && mv $SBT_NAME $SBT_HOME \
  && cleanimage
+
 ENV PATH $PATH:$SBT_HOME/bin
+
+RUN sbt 'set scalaVersion := "2.12.8"' compile \
+ && cleanimage
 
 
 WORKDIR /root
